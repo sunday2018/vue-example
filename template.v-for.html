@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>template data display</title>
+	<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+	<h2>前端数据渲染展示:v-for</h2>
+<div id="app">
+	<ul>
+		<li v-for="item in items">
+			<h3>{{item.title}}</h3>
+			<p>{{item.description}}</p>
+		</li>
+	</ul>
+	<hr>
+	<ul>
+		<li v-for="(value, key, index) in object">
+			{{ index }} {{key}} : {{value}}
+		</li>
+	</ul>
+	<hr>
+	<li v-for="n in 10">
+		{{n}}
+	</li>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#app',
+		data: {
+			items:[
+			{title:'《唐诗三百首》',description:"劝君更尽一杯酒，西出阳关无故人"},
+			{title:"《诗经》",description:"窈窕淑女，君子好逑"},
+			{title:"《宋词》",description:"稻花香里说丰年，听取蛙声一片"},
+			{title:"《元曲》",description:"夕阳西下，断肠人在天涯"}
+			],
+			object:{
+			name: '百度',
+			url: 'http://www.baidu.com',
+			slogan: '百度一下'
+		}
+		}
+		
+	})
+</script>
+</body>
+</html>

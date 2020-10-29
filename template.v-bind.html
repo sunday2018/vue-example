@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>v-bind应用</title>
+	<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<style>
+	.class1{background:#444;color:#eee;}
+</style>
+<body>
+	<h1>v-bind绑定html元素属性</h1>
+	<div id="app">
+		<label for="r1">修改颜色</label>
+		<input type="checkbox" v-model="use" id="r1">
+		<br><br>
+		<div v-bind:class="{'class1':use}">b-bind:class指令</div>
+	
+	<h1>v-bind指令被用来响应地更新HTML属性</h1>
+	
+		<a v-bind:href="url">百度</a>
+	</div>
+	<script>
+		new Vue({
+			el: '#app',
+			data:{
+				use: false,
+				url: 'http://www.baidu.com'
+			}
+		})
+	</script>
+</body>
+</html>
