@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>v-on事件绑定</title>
+	<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+	<h1>事件绑定：v-on</h1>
+	<p>通过v-on指令监听DOM事件，无需通过js方式获取DOM元素，直接绑定事件。</p>
+<div id="app">
+	<button v-on:click="say">打招呼</button>
+</div>
+<script>
+	var vm = new Vue({
+		el:'#app',
+		data:{
+			msg:'hello world',
+		},
+		methods:{
+			say:function(){
+				alert(this.msg);
+			}
+		}
+	})
+</script>
+</body>
+</html>
