@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hello world</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+</head>
+<body>
+	<h2>双向数据绑定示例</h2>
+	<p>v-model指令可以对表单元素进行双向数据绑定，在修改表单元素值的同时，实例vm中对应的属性值也同时更新。</p>
+
+	
+	<div id="app">
+		<!--text-->
+		<p><h2>v-model双向绑定</h2></p>
+		<p>你输入的是：{{msg1}}</p>
+		<input type="text" v-model="msg1">
+		<br><br>
+
+		<!--radio-->
+		<label><input type="radio" value="male" v-model="gender">男</label>
+		<label><input type="radio" value="female" v-model="gender">女</label>
+		<span>{{gender}}</span>
+		<br><br>
+		<!--checkbox-->
+		<input type="checkbox" v-model="checked">
+		<span>checked:{{checked}}</span>
+		<br><br>
+		<!--multi checkbox-->
+		<label><input type="checkbox" value="1" v-model="multiChecked">1</label>
+		<label><input type="checkbox" value="2" v-model="multiChecked">2</label>
+		<label><input type="checkbox" value="3" v-model="multiChecked">3</label>
+		<p>MultiChecked:{{multiChecked.join('|')}}</p>
+		<br><br>
+		<!--select-->
+		<select v-model="selected">
+			<option selected>A</option>
+			<option>B</option>
+			<option>C</option>
+		</select>
+		<span>Your selected:{{selected}}</span>
+		<br><br>
+		<!--nulti selected-->
+		<select v-model="multiSelected" multiple>
+			<option selected="true">A</option>
+			<option>B</option>
+			<option>C</option>
+		</select>
+		<span>MultiSelected:{{multiSelected.join('|')}}</span>
+	</div>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				msg1: '',
+				gender:'',
+				checked:'',
+				multiChecked:[],
+				selected:'',
+				multiSelected:[],
+				a:'checked',
+				b:'checked',
+			}
+		})
+	</script>
+</body>
+</html>
