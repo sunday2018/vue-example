@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>component 组件</title>
+	<script src="vue.min.js"></script>
+</head>
+<body>
+<div>
+	<h1>component 组件</h1>
+	<span>
+		作用：<br/>
+		<ul>
+			<li>扩展HTML元素</li>
+			<li>封装可重用代码</li>
+		</ul>
+	</span>
+</div>
+
+<div id="app">
+	<runoob1></runoob1>
+	<runoob></runoob>
+</div>
+
+<script>
+	// 注册
+	Vue.component('runoob1', {
+		template: '<h1>自定义全局组件</h1>'
+	})
+
+	var Child = {
+		template: '<h1>自定义局部组件</h1>'
+	}
+
+	// 创建实例
+	new Vue({
+		el: '#app',
+		components: {
+			'runoob1': Child,
+		}
+	})
+</script>
+</body>
+</html>
