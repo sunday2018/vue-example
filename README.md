@@ -4,7 +4,7 @@
 * 数据双向绑定（修改视图时数据也会赋值给model，更改model时也会反应到视图上。）
 
 ## 目录说明
-* ***basic-application*** vue基础应用，属于纯语法示例。
+* ***$\color{#008080}{basic-application}$*** vue基础应用，属于纯语法示例。
 * ***vue-element*** vue-cli脚手架项目，并集成element。
 
 
@@ -28,7 +28,7 @@
 ```npm install vue-router```
 4. 安装vue-cli
 ```npm install -g @vue/cli```  
-检测vue-cli是否安装成功  
+	检测vue-cli是否安装成功  
 ```vue -V```
 
 ## 构建项目
