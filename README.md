@@ -28,8 +28,7 @@
 ```npm install vue-router```
 4. 安装vue-cli
 ```npm install -g @vue/cli```  
-
- 	检测vue-cli是否安装成功  
+	检测vue-cli是否安装成功
 ```vue -V```
 
 ## 构建项目
