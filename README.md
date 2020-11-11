@@ -20,7 +20,8 @@
 1. 安装webpack  
 ```npm init```  
 (切换到项目根目录，安装到项目目录中，生成node_moudules目录和package-lock.json文件)  
-```npm install --save-dev webpack```
+```npm install --save-dev webpack```  
+全局安装：```npm install -g webpack```
 2. 安装cnpm  
 ```npm install -g cnpm --registry=https://registry.npm.taobao.org```
 3. 安装vue, vue-router  
@@ -31,7 +32,7 @@
 	检测vue-cli是否安装成功  
 ```vue -V```
 
-## 构建项目
+## 构建并运行项目
 1. 使用vue-cli脚手架构建项目 ```vue init webpack <project_name>```
 2. ```cd <project_name>```
 3. 安装依赖包：```npm install```
@@ -41,15 +42,44 @@
 7. 根目录形成dist文件夹，此目录下的内容即为上传到服务器上的文件
 
 ## 集成element
-1. 安装element-ui
-```npm i element-ui -g```
-2. 在src/main.js中引用element-ui
+* 安装element-ui
+	1. 切换到项目根目录：```cd <project root path>```
+	2. 安装element-ui
+	```npm i element-ui -g```  
+	> 安装后package.json中的dependencies会增加element-ui依赖
+	3. ```cnpm i element-ui -S```
+* 在main.js中配置element-ui
+在main.js中增加导入和让VUE使用elementUI  
+```
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+
+import ElementUI from 'element-ui'
+
+Vue.config.productionTip = false
+
+Vue.use(ElementUI)
+
+new Vue({
+	el: '#app',
+	router,
+	componsents: { App },
+	template: '<App/>'
+	})
+```
+* 安装依赖
+npm install
+* 使用element-ui
+创建文件helloWrold.vue
+```
+
+```
 
 
 
 ## npm包管理器命令
-npm 集成在node.js中  
-npm install -g cnpm --registry=http://registry.npm.taobao.org  
-
-npm 切换镜像：npm config set registry https://registry.npm.taobao.org  
-验证镜像源： npm config get registry
+安装cnpm：```npm install -g cnpm --registry=http://registry.npm.taobao.org```  
+npm切换镜像：```npm config set registry https://registry.npm.taobao.org```  
+验证镜像源： ```npm config get registry```  
+清除缓存：```npm cache clean --fource```  
