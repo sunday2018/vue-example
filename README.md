@@ -1,11 +1,11 @@
 # VUE
-轻量级MVVM框架
-使用数据驱动+组件化开发
-数据双向绑定（修改视图时数据也会赋值给model，更改model时也会反应到视图上。）
+* 轻量级MVVM框架
+* 使用数据驱动+组件化开发
+* 数据双向绑定（修改视图时数据也会赋值给model，更改model时也会反应到视图上。）
 
 ## 目录说明
 * ***basic-application*** vue基础应用，属于纯语法示例。
-* *vue-element* vue-cli脚手架项目，并集成element。
+* ***vue-element*** vue-cli脚手架项目，并集成element。
 
 
 ## VUE技术栈
@@ -17,18 +17,18 @@
 
 
 ## 环境搭建
-1. 安装webpack
-```npm init```
-(切换到项目根目录，安装到项目目录中，生成node_moudules目录和package-lock.json文件)
+1. 安装webpack  
+```npm init```  
+(切换到项目根目录，安装到项目目录中，生成node_moudules目录和package-lock.json文件)  
 ```npm install --save-dev webpack```
-2. 安装cnpm
+2. 安装cnpm  
 ```npm install -g cnpm --registry=https://registry.npm.taobao.org```
-3. 安装vue, vue-router
-```npm install vue```
+3. 安装vue, vue-router  
+```npm install vue```  
 ```npm install vue-router```
 4. 安装vue-cli
-```npm install -g @vue/cli```
-检测vue-cli是否安装成功 
+```npm install -g @vue/cli```  
+检测vue-cli是否安装成功  
 ```vue -V```
 
 ## 构建项目
@@ -48,8 +48,8 @@
 
 
 ## npm包管理器命令
-npm 集成在node.js中
-npm install -g cnpm --registry=http://registry.npm.taobao.org
+npm 集成在node.js中  
+npm install -g cnpm --registry=http://registry.npm.taobao.org  
 
-npm 切换镜像：npm config set registry https://registry.npm.taobao.org
+npm 切换镜像：npm config set registry https://registry.npm.taobao.org  
 验证镜像源： npm config get registry
