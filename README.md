@@ -20,29 +20,29 @@
 1. 安装webpack
 	npm init
 (切换到项目根目录，安装到项目目录中，生成node_moudules目录和package-lock.json文件)
-npm install --save-dev webpack
+```npm install --save-dev webpack```
 2. 安装cnpm
-	npm install -g cnpm --registry=https://registry.npm.taobao.org
+```npm install -g cnpm --registry=https://registry.npm.taobao.org```
 3. 安装vue, vue-router
-	npm install vue
-	npm install vue-router
+```npm install vue```
+```npm install vue-router```
 4. 安装vue-cli
 	npm install -g @vue/cli
 检测vue-cli是否安装成功 
 	vue -V
 
 ## 构建项目
-1. 使用vue-cli脚手架构建项目     vue init webpack <project_name>
-2. 	cd <project_name>
-3. 安装依赖包：    npm install
-4. 开发模式下运行程序：    npm run dev
+1. 使用vue-cli脚手架构建项目 ```vue init webpack <project_name>```
+2. ```cd <project_name>```
+3. 安装依赖包：```npm install```
+4. 开发模式下运行程序：```npm run dev```
 5. 浏览器访问：http://127.0.0.1:8080
-6. 服务器打包部署：    npm run build
+6. 服务器打包部署：```npm run build```
 7. 根目录形成dist文件夹，此目录下的内容即为上传到服务器上的文件
 
 ## 集成element
 1. 安装element-ui
-	npm i element-ui -S
+```npm i element-ui -g```
 2. 在src/main.js中引用element-ui
 
 
