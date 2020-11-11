@@ -3,8 +3,9 @@
 使用数据驱动+组件化开发
 数据双向绑定（修改视图时数据也会赋值给model，更改model时也会反应到视图上。）
 
-## vue学习小实例
-basic_application vue基础应用，纯语法示例
+## 目录说明
+basic-application vue基础应用，属于纯语法示例。
+vue-element vue-cli脚手架项目，并集成element。
 
 
 ## VUE技术栈
@@ -15,61 +16,33 @@ basic_application vue基础应用，纯语法示例
 4. webpack 强大的文件打包工具，将前段项目距文件统一打包压缩至js中，并且可以通过vue-loader等加载器实现语法转化与加载。
 
 
-## webpack
-### 安装
+## 环境搭建
+1. 安装webpack
 npm init
 (切换到项目根目录，安装到项目目录中，生成node_moudules目录和package-lock.json文件)
 npm install --save-dev webpack
-
-### 打包
-webpack <源文件> -o <目标文件>
-(npm install webpack-cli -g)
-
-
-## vue脚手架初始化项目
-环境准备工作：
-1. 安装cnpm
+2. 安装cnpm
 npm install -g cnpm --registry=https://registry.npm.taobao.org
-2. 安装vue, vue-router
+3. 安装vue, vue-router
 npm install vue
 npm install vue-router
-3. 安装vue-cli
-npm install @vue/cli
-4. 检测vue-cli是否安装成功
-vue -V
-5. 查看webpack
-webpack -v
+4. 安装vue-cli
+npm install -g @vue/cli
+检测vue-cli是否安装成功 vue -V
 
-构建项目：
-1. 在工作目录下新建一个vue项目
-vue init webpack <project_name>
-（<project_name>目录会自动创建，若已手动创建，需cd的此目录下执行vue init webpack）
-目录解释说明：
-build 最终发布的代码的存放位置
-config 配置路径、端口号等一些信息
-node_modules npm加载的项目所需要的各种依赖模块
-src 源码目录
-  assets 存放图片
-  components 组件文件
-  router/index.js 路由配置
-  App.vue 羡慕入口组件
-  main.js 项目核心文件（整个项目的入口js），引入依赖包、默认页面样式等（项目运行后回在index.html中形成一个app.js文件）。
-static 静态资源目录，如图片、字体等
-test 初始测试目录
-index.html 单页面入口文件
-package.json 项目配置信息文件/所依赖的开发博的版本信息及所依赖的插件信息
-README.md 项目说明文件
-webpack.config.js webpack的位置文件
-。babelrc 检测es6语法的文件配置
-.getignore 忽略文件的配置
-.postcssrc.js 前缀的配置
+## 构建项目
+1. 使用vue-cli脚手架构建项目 vue init webpack <project_name>
+2. cd <project_name>
+3. 安装依赖包：npm install
+4. 开发模式下运行程序：npm run dev
+5. 浏览器访问：http://127.0.0.1:8080
+6. 服务器打包部署：npm run build
+7. 根目录形成dist文件夹，此目录下的内容即为上传到服务器上的文件
 
-2. 运行vue项目
-npm run dev
-3. 浏览器访问localhost:8080
-4. 安装element-ui
+## 集成element
+1. 安装element-ui
 npm i element-ui -S
-5. 在src/main.js中引用element-ui
+2. 在src/main.js中引用element-ui
 
 
 
