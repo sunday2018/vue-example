@@ -4,7 +4,7 @@
 * 数据双向绑定（修改视图时数据也会赋值给model，更改model时也会反应到视图上。）
 
 ## 目录说明
-* <font color=#008080 >basic-application</font> vue基础应用，属于纯语法示例。
+* <span sytle="color:#008080" >basic-application</span> vue基础应用，属于纯语法示例。
 * ***vue-element*** vue-cli脚手架项目，并集成element。
 
 
